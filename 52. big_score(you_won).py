@@ -24,9 +24,11 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 # Установка фона
 screen.fill((255,255,255))
 # Установка текста на экран
+    # Текст со счетом
 font = pygame.font.SysFont("Arial", 20)
 score = font.render("1233456", True, BLACK)
 screen.blit(score,(550,20-10))
+    # Текст GAME OVER
 title = pygame.font.SysFont("Arial", 50)
 score = title.render("GAME OVER", True, RED)
 screen.blit(score,(WIDTH/2-15*9,HEIGHT/2-25))
