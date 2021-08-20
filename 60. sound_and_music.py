@@ -17,11 +17,6 @@ FPS = 15 # Специально поменьше, что бы не вводит�
 WHITE = (255,255,255)
 BLACK = (0,0,0)
 
-# Позиция корабля
-xpos = WIDTH/2-50
-ypos = HEIGHT/2-50
-angle = 0
-
 # Инициализация
 pygame.init()
 # Установа заголовка программы
@@ -35,7 +30,6 @@ pygame.mixer.music.load("60. music.wav")
 rocket_launch = pygame.mixer.Sound("60. rocket_launch.wav")
 # Обновление экрана
 pygame.display.flip()
-
 
 # Переменаня цикла
 running = True
@@ -69,8 +63,6 @@ while running:
         pygame.mixer.music.play(-1)
     elif choise == 4:
         pygame.mixer.music.stop()
-    
-        
         
     # Обновление дисплея
     pygame.display.update()
@@ -85,4 +77,3 @@ while running:
             
     # Определяем частоту обновлений
     frames.tick(FPS)
-        
