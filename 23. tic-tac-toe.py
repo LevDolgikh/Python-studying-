@@ -1,9 +1,11 @@
-# Date: 12.07.2021 - 13.07.2021
+# Date: 12.07.2021 - 13.07.2021 (edited 26.10.2022)
 # Author: Lev Dolgikh
 import random
 from datetime import datetime
 # Крестики-нолики
 # Компьютер играет в крестики-нолики против пользователя
+
+random.seed(None)
 
 def displayInstrustions():
     """Выводит на экран инструкцию для игрока."""
@@ -136,9 +138,11 @@ def cumputersMove(board, symbol):
             AImoves.append(6) 
 
     # Первые ходы
+    if len(availableMoves) == 9:
+        AImoves.insert(0,random.randrange(0,9,1))
     # В случае, если отсутствуют победные или оптимальные ходы ход осуществляется случайным образом
     AImoves.append(random.randrange(0,9,1))
-
+    
     # Проверка на доступность ходов
     for i in AImoves:
         i += 1
